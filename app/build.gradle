@@ -9,6 +9,12 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
     }
     buildTypes {
         release {
@@ -23,4 +29,10 @@ dependencies {
     compile 'com.android.support:leanback-v17:26.+'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.github.bumptech.glide:glide:3.4.+'
+    compile 'com.alibaba:arouter-api:1.2.4'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'//网络库
+    compile 'com.google.code.gson:gson:2.8.2'//gson
+
+
 }
